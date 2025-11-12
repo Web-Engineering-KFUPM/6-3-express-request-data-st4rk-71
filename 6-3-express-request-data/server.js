@@ -109,8 +109,13 @@ const app = express();
 
 
 // create server
-
-
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`API running at http://localhost:${PORT}`);
+});
+app.get("/", (_req, res) => {
+  res.send(`API running at http://localhost:${PORT}`);
+});
 // Query params: /echo?name=Ali&age=22
 
 
